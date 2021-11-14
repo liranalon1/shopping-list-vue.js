@@ -82,5 +82,6 @@ export default {
       font-size: 20px;
       margin: 60px auto 30px;
       text-align: center;
+      word-break: break-all;
   }
 </style>

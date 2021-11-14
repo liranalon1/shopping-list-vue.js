@@ -120,7 +120,10 @@ export default {
                 }
             }
             textarea{
+                width: 100%;
+                max-height: 200px;
                 padding: 5px 20px;
+                word-break: break-all;
             }
 
             &.price{

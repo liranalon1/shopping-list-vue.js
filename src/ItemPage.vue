@@ -45,6 +45,8 @@ export default {
     padding: 0 40px;
   }
   .description{
+    width: 100%;
+    word-break: break-all;
     &.center{
       text-align: center;
     }
