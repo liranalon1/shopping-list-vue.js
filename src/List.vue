@@ -9,7 +9,7 @@
                     <div class="product-index box1 flex flex-center"><span class="flex flex-center">{{index+1}}</span></div>
                     <div class="product-wrap box2 flex">
                         <div class="product">{{item.itemName}}</div>
-                        <div class="price">{{item.price}} {{currency}}</div>
+                        <div class="price">{{numberWithCommas(item.price)}} {{currency}}</div>
                     </div>
                     <div class="edit-options box3 flex">
                         <div class="complete btn" @click.stop="handleComplete(item, index)">
@@ -28,7 +28,7 @@
                 <div class="box1"><span class="flex flex-center"></span></div>
                 <div class="box2 flex">
                     <div class="product">Total :</div>
-                    <div class="price">{{totalprice}} {{currency}}</div>
+                    <div class="price">{{numberWithCommas(totalprice)}} {{currency}}</div>
                 </div>
             </div>
             
@@ -90,12 +90,10 @@ export default {
     },
     computed: {
         totalprice: function(){
-            let total = 0;
-            this.itemsList.forEach((item) =>{
-                total += item.price;
-            });
-
-            return total;
+            let cost = this.itemsList.reduce(function (acc, item) {
+                return acc + item.price * 1;
+            }, 0);
+            return cost;           
         }
     },
 }
