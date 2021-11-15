@@ -28,7 +28,7 @@
                 <div class="box1"><span class="flex flex-center"></span></div>
                 <div class="box2 flex">
                     <div class="product">Total :</div>
-                    <div class="price">{{numberWithCommas(totalprice)}} {{currency}}</div>
+                    <div class="price">{{totalprice}} {{currency}}</div>
                 </div>
             </div>
             
