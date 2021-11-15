@@ -9,7 +9,7 @@
                     <div class="product-index box1 flex flex-center"><span class="flex flex-center">{{index+1}}</span></div>
                     <div class="product-wrap box2 flex">
                         <div class="product">{{item.itemName}}</div>
-                        <div class="price">{{numberWithCommas(item.price)}} {{currency}}</div>
+                        <div class="price">{{item.price}} {{currency}}</div>
                     </div>
                     <div class="edit-options box3 flex">
                         <div class="complete btn" @click.stop="handleComplete(item, index)">
