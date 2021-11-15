@@ -123,7 +123,7 @@ export default {
                 width: 100%;
                 max-height: 200px;
                 padding: 5px 20px;
-                word-break: break-all;
+                word-break: break-word;
             }
 
             &.price{

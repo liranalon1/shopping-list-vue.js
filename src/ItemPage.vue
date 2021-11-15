@@ -46,7 +46,7 @@ export default {
   }
   .description{
     width: 100%;
-    word-break: break-all;
+    word-break: break-word;
     &.center{
       text-align: center;
     }
