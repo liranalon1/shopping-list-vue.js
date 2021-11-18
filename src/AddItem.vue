@@ -37,7 +37,7 @@ export default {
                 itemName: '',
                 description: '',                
                 price: '',
-                isComplete: false,
+                isComplete: false
             }
         }
     },

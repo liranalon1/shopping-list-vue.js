@@ -51,9 +51,14 @@ export default {
     }
   },
   methods:{
-    showItemPage(item){
+    showItemPage:function(item){
       this.selectedItem = item;
       this.itemPageIsActive = true;
+      this.$router.push(this.handleURL(item.itemName));
+    },
+    handleURL:function(urlPath){
+      let newPath = urlPath.replace(/\s/g, '-');
+      return `/${newPath}`;
     },
     closeItemPage(){
       this.itemPageIsActive = false;

@@ -63,7 +63,14 @@ export default {
           addItemScreenIsActive: false,
         }
     },
+    mounted () {
+        this.handlePagePath();
+    },
     methods: {
+        handlePagePath:function(){
+            const path = `/`
+            if (this.$route.path !== path) this.$router.push(path);
+        },
         handleComplete: function(item, index){
             for(let i in this.itemsList){
                 if(this.itemsList[i] === item){
@@ -73,7 +80,6 @@ export default {
         },
         handleItemPage: function(item){
             this.$emit('update:ItemPageOpen', item);
-            this.$router.push(`/${item.itemName}`);
         },
         showAddItemScreen: function(){
            this.addItemScreenIsActive = true; 
@@ -90,7 +96,7 @@ export default {
     },
     computed: {
         totalprice: function(){
-            let cost = this.itemsList.reduce(function (acc, item) {
+            let cost = this.itemsList.reduce((acc, item) => {
                 return acc + item.price * 1;
             }, 0);
             return cost;           
